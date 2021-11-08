@@ -85,7 +85,7 @@ async function createuser(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/crateuser",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/crateuser",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }

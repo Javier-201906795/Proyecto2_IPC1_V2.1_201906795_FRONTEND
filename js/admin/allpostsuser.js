@@ -40,7 +40,7 @@ async function buscarposts(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/allposts",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/allposts",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -154,7 +154,7 @@ async function eliminarpost(id){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/deletepost",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/deletepost",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -214,7 +214,7 @@ async function  datospost(id){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/leerpost",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/leerpost",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -309,7 +309,7 @@ async function updatepost(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/editpost",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/editpost",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }

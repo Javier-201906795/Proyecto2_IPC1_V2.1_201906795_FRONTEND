@@ -40,7 +40,7 @@ async function buscarposts(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/postsuser",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/postsuser",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -152,7 +152,7 @@ async function eliminarpost(id){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/deletepost",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/deletepost",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -212,7 +212,7 @@ async function  datospost(id){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/leerpost",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/leerpost",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -307,7 +307,7 @@ async function updatepost(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/editpost",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/editpost",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }

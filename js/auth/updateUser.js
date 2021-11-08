@@ -60,7 +60,7 @@ async function actualizarusuario(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/updateuser",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/updateuser",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }

@@ -27,7 +27,7 @@ async function loginbackend(){
 
 
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/login",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/login",{
         method: "POST",
         body: JSON.stringify(data),
         headers: { 'Content-Type': 'application/json' }

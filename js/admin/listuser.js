@@ -42,7 +42,7 @@ async function listadousuarios(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/allusers",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/allusers",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -139,7 +139,7 @@ async function datosusuariobackend(id){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/userdata",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/userdata",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -238,7 +238,7 @@ async function editarusuariobackend(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/updateuser",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/updateuser",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -297,7 +297,7 @@ async function eliminarusuario(id){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/deleteuser",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/deleteuser",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }

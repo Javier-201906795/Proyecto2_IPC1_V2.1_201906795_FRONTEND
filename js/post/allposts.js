@@ -26,7 +26,7 @@ async function backendposts(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/allposts",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/allposts",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -156,7 +156,7 @@ async function nuevolike(id){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/likepost",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/likepost",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -209,7 +209,7 @@ async function ordenporlike(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/filterlike",{
+    const rawResponse = await fetch("https://flaskserver-h4l9s.ondigitalocean.app/filterlike",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
