@@ -116,7 +116,7 @@ async function backendnuevopost(){
         console.log(datajson);
         
         //Peticion a servidor on fetch
-        const rawResponse = await fetch("http://127.0.0.1:4000/createpost",{
+        const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/createpost",{
             method: "PUT",
             body: datajson,
             headers: { 'Content-Type': 'application/json' }

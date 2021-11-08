@@ -85,7 +85,7 @@ async function createuser(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/crateuser",{
+    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/crateuser",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }

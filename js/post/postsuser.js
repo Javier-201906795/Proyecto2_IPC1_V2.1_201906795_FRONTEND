@@ -40,7 +40,7 @@ async function buscarposts(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/postsuser",{
+    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/postsuser",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -152,7 +152,7 @@ async function eliminarpost(id){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/deletepost",{
+    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/deletepost",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -212,7 +212,7 @@ async function  datospost(id){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/leerpost",{
+    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/leerpost",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -307,7 +307,7 @@ async function updatepost(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/editpost",{
+    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/editpost",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }

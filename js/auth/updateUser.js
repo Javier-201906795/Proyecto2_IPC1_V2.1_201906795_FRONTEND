@@ -60,7 +60,7 @@ async function actualizarusuario(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/updateuser",{
+    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/updateuser",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }

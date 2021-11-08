@@ -26,7 +26,7 @@ async function backendposts(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/allposts",{
+    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/allposts",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -156,7 +156,7 @@ async function nuevolike(id){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/likepost",{
+    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/likepost",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
@@ -209,7 +209,7 @@ async function ordenporlike(){
     console.log(datajson);
     
     //Peticion a servidor on fetch
-    const rawResponse = await fetch("http://127.0.0.1:4000/filterlike",{
+    const rawResponse = await fetch("http://proyecto2-ipc1v2.herokuapp.com/filterlike",{
         method: "PUT",
         body: datajson,
         headers: { 'Content-Type': 'application/json' }
