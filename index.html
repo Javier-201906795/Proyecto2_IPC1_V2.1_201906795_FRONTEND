@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Inicio</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="filestemplate/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body id="page-top" onload="verificarLoginINDEX()">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- MENU -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item">
+                <a class="nav-link" href="1_5_posts.html">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Todos los Post</span></a>
+            </li>
+            <!-- Divider -->
+            <div id="arealogin">
+                <hr class="sidebar-divider">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="1_2_login.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Login</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="1_3_register.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Registro nuevo usuario</span></a>
+                </li>
+            </div>
+            
+            <div id="areauser" style="visibility:hidden">
+                <!-- Divider -->
+                <hr class="sidebar-divider">
+
+                <div class="sidebar-heading">
+                    Perfil 
+                </div>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="1_3_actualizardatos.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Modificar Perfil</span></a>
+                </li>
+
+                <!-- Heading -->
+                <div class="sidebar-heading">
+                    Interface   
+                </div>
+                <li class="nav-item">
+                    <a class="nav-link" href="1_4_nuevopost.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Crear Post</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="1_4_myposts.html">
+                        <i class="fas fa-fw fa-tachometer-alt"></i>
+                        <span>Ver mis Posts</span></a>
+                </li>
+            </div>
+
+        <div id="paneladmin" style="visibility:hidden">
+            <div class="sidebar-heading">
+                Administrador
+            </div>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Usuarios</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Usuarios:</h6>
+                        <a class="collapse-item" href="1_6_listusers.html">Listado Usuarios</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities2"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Post</span>
+                </a>
+                <div id="collapseUtilities2" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Post:</h6>
+                        <a class="collapse-item" href="1_6_listposts.html">Listado Post</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities3"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Carga Masiva</span>
+                </a>
+                <div id="collapseUtilities3" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Carga Masiva:</h6>
+                        <a class="collapse-item" href="1_6_cargamasivausuarios.html">Usuarios</a>
+                        <a class="collapse-item" href="1_6_cargamasivaposts.html">Posts</a>
+                    </div>
+                </div>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities4"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-fw fa-wrench"></i>
+                    <span>Reportes</span>
+                </a>
+                <div id="collapseUtilities4" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Reportes:</h6>
+                        <a class="collapse-item" href="1_7_reporte_posts.html">Top 5 Posts</a>
+                        <a class="collapse-item" href="1_7_reporte_usuario.html">Top 5 Usuario</a>
+                    </div>
+                </div>
+            </li>
+
+            
+
+        </div>
+
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
+        </ul>
+        <!-- End MENU -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <!-- MENU Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+                <!-- Sidebar Toggle (Topbar) -->
+                <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <!-- Topbar Navbar -->
+                <ul class="navbar-nav ml-auto">
+                    <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                    <li class="nav-item dropdown no-arrow d-sm-none">
+                        <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <!-- Dropdown - Messages -->
+                        <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                            aria-labelledby="searchDropdown">
+                            <form class="form-inline mr-auto w-100 navbar-search">
+                                <div class="input-group">
+                                    <input type="text" class="form-control bg-light border-0 small"
+                                        placeholder="Search for..." aria-label="Search"
+                                        aria-describedby="basic-addon2">
+                                    <div class="input-group-append">
+                                        <button class="btn btn-primary" type="button">
+                                            <i class="fas fa-search fa-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </li>
+                    <div class="topbar-divider d-none d-sm-block"></div>
+                    <!-- Nav Item - User Information -->
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small" id="nombreusuario">usuario</span>
+                            <img class="img-profile rounded-circle"
+                                src="img/undraw_profile.svg">
+                        </a>
+                        <!-- Dropdown - User Information -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                            aria-labelledby="userDropdown">
+                            <a class="dropdown-item" href="1_3_actualizardatos.html">
+                                <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Modificar Perfil
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                Cerrar seción
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+
+            </nav>
+            <!-- End of MENU Topbar -->
+
+            <!-- Main Content -->
+            <div id="content">
+                <br><br><br>
+                <center><img src="https://lasillarotarm.blob.core.windows.net/images/2019/07/24/periodismocriticomin.png" class="img-fluid text-center" alt="Cinque Terre"width="15%" height="15%"> </center>
+                <br>
+                <h1 class="text-center text-primary"><b>UBlog</b></h1>
+                <br>
+                <div class="container-fluid">
+                    <div class="col-md-12">
+                        <!-- Basic Card Example -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h5 class="m-0 font-weight-bold text-primary">Mision</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                <div class="col-md-3 mb-4">
+                                    <center><img src="https://m.media-amazon.com/images/I/41MwZKrzKjL._AC_.jpg" class="img-fluid text-center" alt="Cinque Terre"width="80%" height="80%"> </center> 
+                                </div>
+                                <div class="col-md-9 mb-4">Contribuir con posts relevantes e intersantes para la comunidad universitaria sancarlistas, comprometiendonos a dar posts de calidad.</div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="col-md-12">
+                        <!-- Basic Card Example -->
+                        <div class="card shadow mb-4">
+                            <div class="card-header py-3">
+                                <h5 class="m-0 font-weight-bold text-primary">Vision</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                <div class="col-md-9 mb-4">Ser el blog mas visitado por los universitarios sancarlistas, porque confiaran en la informacion dada atraves de nuestro Blog
+                                </div>
+                                <div class="col-md-3 mb-4">
+                                    <center><img src="https://www.pngkit.com/png/detail/40-406237_svg-letra-v-en-cursiva.png" class="img-fluid text-center" alt="Cinque Terre"width="80%" height="80%"> </center> 
+                                </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row container-fluid">
+                        <div class="col-md-6">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h5 class="m-0 font-weight-bold text-primary text-center">Acerca de</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12 ">
+                                            <center><img src="data:image/png;base64,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" class="img-fluid text-center" alt="Cinque Terre"width="50%" height="50%"> </center> 
+                                        </div>
+                                    <div class="col-md-12 mb-4">Somos un grupo pequeño de universitarios con hambre de noticias  y pasion por darlas a conocer.
+                                    </div>
+                                    
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card shadow mb-4">
+                                <div class="card-header py-3">
+                                    <h5 class="m-0 font-weight-bold text-primary text-center">Contactenos</h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-12 ">
+                                            <center><img src="data:image/png;base64,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" class="img-fluid text-center" alt="Cinque Terre"width="50%" height="50%"> </center> 
+                                        </div>
+                                    <div class="col-md-12 mb-4">Correo: 2993047870101@ingenieria.usac.edu.gt
+
+                                    </div>
+                                    
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                
+                <br><br><br><br>
+
+
+
+                <div class="container-fluid">
+                    <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6 card mb-4 py-3 border-bottom-secondary">
+                                <h2 class="text-center text-primary"><b>Datos del Estudiante</b></h2>
+                            </div>
+                    </div>
+                    <br><br>
+                    <div class="row">
+                    <div class="col-md-12">
+                        <div class="card shadow mb-4">
+                            
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-6 ">
+                                        <center><img src="Fotoperfil.jpeg" class="img-fluid text-center rounded-circle" alt="Cinque Terre"width="200px" height="200px"> </center> 
+                                    </div>
+                                <div class="col-md-6 mb-4">
+                                    <br><br><br>
+                                    <h3><b class="text-primary">Nombres: </b> Javier Ricardo </h3>
+                                    <h3><b class="text-primary">Apellidos: </b> Yllescas Barrios </h3>
+                                    <h3><b class="text-primary">Carne: </b> 201906795 </h3>
+                                </div>
+                                
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>    
+            </div>
+                
+            <br><br>
+
+
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Javier Ricardo Yllescas Barrios 2021</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">UBlog</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Deseas cerrar secion en UBlog.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" onclick="cerrarSecionINDEX()">Cerrar Secion</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="filestemplate/jquery/jquery.min.js"></script>
+    <script src="filestemplate/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="filestemplate/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+
+    
+    
+
+    <!-- { Autenticacion de login } -->
+    <script src="js/auth/login_verifier.js"></script>
+
+</body>
+
+</html>
